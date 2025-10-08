@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Vehículos Antiguos{% endblock %}
+{% block content %}
+<h2>Historia del Automóvil</h2>
+<p>Los vehículos antiguos representan los inicios de la ingeniería automotriz, marcando el avance tecnológico del siglo XX.</p>
+
+<ul>
+    <li>Ford Modelo T (Ford)</li>
+    <li>Volkswagen Beetle (Volkswagen)</li>
+    <li>Chevrolet Bel Air (Chevrolet)</li>
+    <li>Rolls-Royce Phantom (Rolls-Royce)</li>
+    <li>Citroën 2CV (Citroën)</li>
+</ul>
+
+<img src="{{ url_for('static', filename='images/ford.jpg') }}" alt="Ford Modelo T">
+<img src="{{ url_for('static', filename='images/beetle.jpg') }}" alt="Beetle">
+{% endblock %}

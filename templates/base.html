@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Desarrollo de Plantilla Base{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #f8f8f8; }
+        header, footer { background-color: #333; color: white; text-align: center; padding: 10px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        main { padding: 20px; background-color: white; max-width: 1000px; margin: 20px auto; border-radius: 10px; }
+        img { max-width: 100%; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desarrollo de Plantilla Base</h1>
+        <nav>
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+            <a href="{{ url_for('animales') }}">Animales Exóticos</a>
+            <a href="{{ url_for('vehiculos') }}">Vehículos Antiguos</a>
+            <a href="{{ url_for('maravillas') }}">Las Maravillas del Mundo</a>
+            <a href="{{ url_for('acerca') }}">Acerca de...</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 - Proyecto de Plantilla Flask y Jinja2</p>
+    </footer>
+</body>
+</html>

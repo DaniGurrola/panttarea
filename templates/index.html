@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<h2>Bienvenido</h2>
+<p>Esta página está dedicada a mostrar información interesante sobre animales exóticos, vehículos antiguos y las maravillas del mundo. Explora el menú superior para descubrir más.</p>
+<img src="{{ url_for('static', filename='images/animal1.jpg') }}" alt="Ejemplo 1">
+<img src="{{ url_for('static', filename='images/vehiculo1.jpg') }}" alt="Ejemplo 2">
+{% endblock %}

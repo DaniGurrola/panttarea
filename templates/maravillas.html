@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Las Maravillas del Mundo{% endblock %}
+{% block content %}
+<h2>Las 7 Maravillas del Mundo Moderno</h2>
+<ul>
+    <li>Chichén Itzá (México)</li>
+    <li>El Coliseo (Italia)</li>
+    <li>La Gran Muralla China (China)</li>
+    <li>Machu Picchu (Perú)</li>
+    <li>Petra (Jordania)</li>
+    <li>El Cristo Redentor (Brasil)</li>
+    <li>Taj Mahal (India)</li>
+</ul>
+
+<img src="{{ url_for('static', filename='images/chichen.jpg') }}" alt="Chichén Itzá">
+<img src="{{ url_for('static', filename='images/coliseo.jpg') }}" alt="Coliseo">
+{% endblock %}
