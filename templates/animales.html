@@ -7,7 +7,9 @@
 <h3>Acuáticos</h3>
 <ul>
     <li>Delfín: Mamífero marino altamente inteligente.</li>
-    <video src="{{ url_for('static', filename='videos/delfin.mp4') }}" alt="Delfín">
+    <video width="700" controls>
+        <source src="{{ url_for('static', filename='video/delfin.mp4') }}" type="video/mp4">
+    </video>
     <li>Pez León: Conocido por su belleza y veneno.</li>
     <img src="{{ url_for('static', filename='images/pezleon.jpg') }}" alt="Pez León">
 </ul>
