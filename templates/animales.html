@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% block title %}Animales Exóticos{% endblock %}
 {% block content %}
-<h2>El Maravilloso Reino Animal</h2>
-<p>La diversidad del reino animal es impresionante, con especies que habitan el agua, la tierra y el aire.</p>
+<h2>Animales exóticos</h2>
+<p>Unos pequeños ejemplos de los muchos animales que nos podemos encontrar:</p>
 
 <h3>Acuáticos</h3>
 <ul>
     <li>Delfín: Mamífero marino altamente inteligente.</li>
+    <video src="{{ url_for('static', filename='videos/delfin.mp4') }}" alt="Delfín">
     <li>Pez León: Conocido por su belleza y veneno.</li>
+    <img src="{{ url_for('static', filename='images/pezleon.jpg') }}" alt="Pez León">
 </ul>
-<img src="{{ url_for('static', filename='images/delfin.jpg') }}" alt="Delfín">
 <img src="{{ url_for('static', filename='images/pezleon.jpg') }}" alt="Pez León">
 
 <h3>Terrestres</h3>
