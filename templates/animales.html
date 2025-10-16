@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Animales Exóticos{% endblock %}
+{% block content %}
+<h2>Animales exóticos</h2>
+<p>Unos pequeños ejemplos de los muchos animales que nos podemos encontrar:</p>
+
+<h3>Acuáticos</h3>
+<ul>
+    <li>Delfín: Mamífero marino altamente inteligente.</li>
+    <video width="700" controls>
+        <source src="{{ url_for('static', filename='video/delfin.mp4') }}" type="video/mp4">
+    </video>
+    <li>Pez León: Conocido por su belleza y veneno.</li>
+    <img src="{{ url_for('static', filename='images/pezleon.jpg') }}" alt="Pez León">
+</ul>
+<img src="{{ url_for('static', filename='images/pezleon.jpg') }}" alt="Pez León">
+
+<h3>Terrestres</h3>
+<ul>
+    <li>Tigre de Bengala: Uno de los felinos más grandes y majestuosos.</li>
+    <li>Camaleón: Maestro del camuflaje y los colores.</li>
+</ul>
+<img src="{{ url_for('static', filename='images/tigre.jpg') }}" alt="Tigre">
+<img src="{{ url_for('static', filename='images/camaleon.jpg') }}" alt="Camaleón">
+
+<h3>Aéreos</h3>
+<ul>
+    <li>Guacamayo: Ave colorida de la selva tropical.</li>
+    <li>Águila Real: Símbolo de poder y libertad.</li>
+</ul>
+<img src="{{ url_for('static', filename='images/guacamayo.jpg') }}" alt="Guacamayo">
+<img src="{{ url_for('static', filename='images/aguila.jpg') }}" alt="Águila">
+{% endblock %}

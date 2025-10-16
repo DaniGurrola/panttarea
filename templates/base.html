@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>{% block title %}Desarrollo de Plantilla Base{% endblock %}</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background-color: #f8f8f8; }
-        header, footer { background-color: #333; color: white; text-align: center; padding: 10px; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        body { font-family: Arial, sans-serif; margin: 0; background-color:rgb(247, 174, 241); }
+        header, footer { background-color: #333; color: pink; text-align: center; padding: 10px; }
+        nav a { color: pink; margin: 0 15px; text-decoration: none; }
         nav a:hover { text-decoration: underline; }
-        main { padding: 20px; background-color: white; max-width: 1000px; margin: 20px auto; border-radius: 10px; }
+        main { padding: 20px; background-color: pink; max-width: 1000px; margin: 20px auto; border-radius: 10px; }
         img { max-width: 100%; border-radius: 10px; }
     </style>
 </head>
@@ -20,6 +20,7 @@
             <a href="{{ url_for('animales') }}">Animales Exóticos</a>
             <a href="{{ url_for('vehiculos') }}">Vehículos Antiguos</a>
             <a href="{{ url_for('maravillas') }}">Las Maravillas del Mundo</a>
+            <a href="{{ url_for('registro') }}">registrate</a>
             <a href="{{ url_for('acerca') }}">Acerca de...</a>
         </nav>
     </header>

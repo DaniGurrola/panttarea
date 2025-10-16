@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -17,6 +17,21 @@ def vehiculos():
 @app.route('/maravillas')
 def maravillas():
     return render_template('maravillas.html')
+
+@app.route('/registro', methods = ("GET", "POST"))
+def registro():
+    error = None
+    if request.method == "POST":
+        nombreCompleto = request.form["nombreCompleto"]
+        email = request.form['email']
+        password = request.form['password']
+        confirmPassword = request.form['confirmPassword']
+        fechaNAcimiento
+    return render_template('registro.html')
+
+@app.route('/iniciosesion')
+def iniciosesion():
+    return render_template('iniciosesion.html')
 
 @app.route('/acerca')
 def acerca():
