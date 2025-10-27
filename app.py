@@ -86,7 +86,7 @@ def iniciosesion():
 
 @app.route('/cerrarsesion')
 def cerrarsesion():
-    session.pop('usuario', None)  # Eliminamos el usuario de la sesión
+    session.pop('usuario', None) 
     return redirect(url_for('inicio'))
 
 @app.route('/acerca')
