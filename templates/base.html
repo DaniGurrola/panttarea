@@ -22,6 +22,12 @@
             <a href="{{ url_for('maravillas') }}">Las Maravillas del Mundo</a>
             <a href="{{ url_for('registro') }}">registrate</a>
             <a href="{{ url_for('acerca') }}">Acerca de...</a>
+            
+            {% if sesion_iniciada %}
+                    <li><a href="{{ url_for('cerrarsesion') }}">Cerrar sesión</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('iniciosesion') }}">Iniciar sesión</a></li>
+                {% endif %}
         </nav>
     </header>
 

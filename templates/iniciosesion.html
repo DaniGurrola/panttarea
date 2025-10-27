@@ -1,32 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Iniciar sesión</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light d-flex justify-content-center align-items-center vh-100">
 
     <div class="card shadow-sm p-4" style="max-width: 400px; width: 100%; border-radius: 10px;">
+        <h5 class="text-center text-dark mb-4">Bienvenido de nuevo :)</h5>
 
-        <h5 class="text-center text-dark mb-4">Bienvenidooo de nuevo :)</h5>
+        {% if error %}
+            <p style="color: red; text-align: center;">{{ error }}</p>
+        {% endif %}
 
-        <form>
+        <form method="POST">
             <div class="mb-3">
                 <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" placeholder="Escribe tu correo electrónico" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Escribe tu correo electrónico" required>
             </div>
 
             <div class="mb-3">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" placeholder="Escribe tu contraseña" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Escribe tu contraseña" required>
             </div>
 
-            <button type="submit" class="btn" style="background-color:rgb(255, 0, 234); color: white; width: 100%;">Iniciar Sesión</button>
+            <button type="submit" class="btn" style="background-color: rgb(255, 0, 234); color: white; width: 100%;">Iniciar sesión</button>
 
             <div class="mt-3 text-center">
-                <small>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></small>
+                <small>¿No tienes cuenta? <a href="{{ url_for('registro') }}">Regístrate aquí</a></small>
             </div>
         </form>
     </div>
@@ -35,4 +39,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
-
