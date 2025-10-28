@@ -71,18 +71,18 @@ def iniciosesion():
         
         
         if email not in usuarios:
-            return render_template('iniciosesion.html', error="Correo o contraseña incorrectos")
+            return render_template('login.html', error="Correo o contraseña incorrectos")
         
         
         user = usuarios[email]
         if not check_password_hash(user['password'], password):
-            return render_template('iniciosesion.html', error="Correo o contraseña incorrectos")
+            return render_template('login.html', error="Correo o contraseña incorrectos")
         
         
         session['usuario'] = email
         return redirect(url_for('inicio'))
     
-    return render_template('iniciosesion.html')
+    return render_template('login.html')
 
 @app.route('/cerrarsesion')
 def cerrarsesion():
